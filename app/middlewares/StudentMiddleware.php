@@ -5,7 +5,10 @@ class StudentMiddleware
 {
     public function handle($next)
     {
-        if (!isset($_SESSION['student_access']) || $_SESSION['student_access'] !== true) {
+         echo "StudentMiddleware is running!";
+    exit;
+
+    if (!isset($_SESSION['student_access']) || $_SESSION['student_access'] !== true) {
 
             echo '<!DOCTYPE html>';
             echo '<html lang="en">';
