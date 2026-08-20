@@ -79,7 +79,7 @@ $config['environment'] = getenv('APP_ENV') ?: 'development';
 | WARNING: You MUST set this value!
 |
 */
-$config['base_url'] = 'http://localhost/Lavalust/';
+$config['base_url'] = getenv('APP_URL') ?: 'http://localhost/Lavalust/';
 
 /*
 |--------------------------------------------------------------------------
