@@ -5,8 +5,6 @@ class StudentMiddleware
 {
     public function handle($next)
     {
-         echo "StudentMiddleware is running!";
-    exit;
 
     if (!isset($_SESSION['student_access']) || $_SESSION['student_access'] !== true) {
 
