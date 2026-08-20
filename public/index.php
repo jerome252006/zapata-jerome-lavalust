@@ -1,5 +1,6 @@
 <?php
 define('PREVENT_DIRECT_ACCESS', TRUE);
+
 /**
  * ------------------------------------------------------------------
  * LavaLust - an opensource lightweight PHP MVC Framework
@@ -45,7 +46,7 @@ define('PREVENT_DIRECT_ACCESS', TRUE);
  * 
  * NO TRAILING SLASH!
  */
-	$system_path 			= 'scheme';
+    $system_path            = 'scheme';
 
 /*
  *---------------------------------------------------------------
@@ -57,26 +58,35 @@ define('PREVENT_DIRECT_ACCESS', TRUE);
  *
  * NO TRAILING SLASH!
  */
-	$application_folder 	= 'app';
+    $application_folder     = 'app';
 
 /*
  *---------------------------------------------------------------
- * APPLICATION DIRECTORY NAME
+ * PUBLIC DIRECTORY NAME
  *---------------------------------------------------------------
- * This let you set up your public folder where css, js and other public,
- * files will be visible
+ * This lets you set up your public folder where css, js, and other public
+ * files will be visible to the web server.
  */
-	$public_folder			= 'public';
+    $public_folder          = 'public';
 
 /*
  * ------------------------------------------------------
  * Define Application Constants
  * ------------------------------------------------------
  */
-define('ROOT_DIR',  dirname(__DIR__) . DIRECTORY_SEPARATOR);
-define('SYSTEM_DIR', ROOT_DIR . $system_path . DIRECTORY_SEPARATOR);
-define('APP_DIR', ROOT_DIR . $application_folder . DIRECTORY_SEPARATOR);
-define('PUBLIC_DIR', $public_folder);
+
+// __DIR__ points to /var/www/html/public (where index.php lives)
+// dirname(__DIR__) moves one level up to the root project folder /var/www/html/
+define('ROOT_DIR',     dirname(__DIR__) . DIRECTORY_SEPARATOR);
+
+// Absolute path to the system/scheme directory
+define('SYSTEM_DIR',   ROOT_DIR . $system_path . DIRECTORY_SEPARATOR);
+
+// Absolute path to the application directory
+define('APP_DIR',      ROOT_DIR . $application_folder . DIRECTORY_SEPARATOR);
+
+// Absolute path to the public directory
+define('PUBLIC_DIR',   ROOT_DIR . $public_folder . DIRECTORY_SEPARATOR);
 
 /*
  * ------------------------------------------------------
