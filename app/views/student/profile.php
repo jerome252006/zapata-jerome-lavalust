@@ -97,6 +97,16 @@
         <?= $email ?>
     </div>
 
+    <div class="info">
+    <span class="label">Skills:</span>
+    <?= $skills ?>
+</div>
+
+<div class="info">
+    <span class="label">Hobbies:</span>
+    <?= $hobbies ?>
+</div>
+
     <nav>
         <a href="<?= site_url('student'); ?>">
             ← Back to Student Home
